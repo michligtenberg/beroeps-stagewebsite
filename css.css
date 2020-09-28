@@ -3,7 +3,7 @@ body {
   grid-template-columns: 75% 25%;
   grid-template-rows: 10vw 30vw 10vw;
   grid-gap: 1em;
-  background-image: url('images/achtergrond.jpg');
+  background-image:
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -40,4 +40,15 @@ aside {
   align-items: center;
   justify-content: center;
 }
-
+.video-cover video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+}
