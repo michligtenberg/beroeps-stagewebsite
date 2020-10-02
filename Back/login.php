@@ -1,3 +1,6 @@
+<?php
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -42,8 +45,17 @@
         if (!$resultaat || mysqli_num_rows($resultaat) > 0)
         {
           if (preg_match("/^-?[1-9][0-9]*$/", $username)) {
+              //pakt de user uit de database
+              $gebruiker = mysqli_fetch_array($resultaat);
+              //koppelt de session aan de gebruikersnaam
+              $_SESSION['username'] = $gebruiker['StudentNummer'];
+              $_SESSION['naam'] = $gebruiker['Naam'];
               header("Location:home_student.php");
           } else {
+            //pakt de user uit de database
+            $gebruiker = mysqli_fetch_array($resultaat);
+            //koppelt de session aan de gebruikersnaam
+            $_SESSION['username'] = $gebruiker['Naam'];
             header("location: home_mentor.php");
           }
         } else
