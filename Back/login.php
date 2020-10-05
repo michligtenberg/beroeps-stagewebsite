@@ -22,17 +22,16 @@
         $password = $wachtwoord;
         $password = mysqli_real_escape_string($mysql,$password);
 
-        $query = "";
 
         if (preg_match("/^-?[1-9][0-9]*$/", $username)) {
-            $query .= "SELECT * FROM Student WHERE
+            $query1 = "SELECT * FROM studenten WHERE
                        StudentNummer = '$username' AND Wachtwoord = '$password'";
 
             //check connectie met de database en voer de query uit
-            $resultaat = mysqli_query($mysql, $query);
+            $resultaat = mysqli_query($mysql, $query1);
         } else
         {
-            $query .= "SELECT * FROM Mentor WHERE
+            $query = "SELECT * FROM mentoren WHERE
                        Naam = '$username' AND Wachtwoord = '$password'";
             $resultaat = mysqli_query($mysql, $query);
         }
@@ -56,6 +55,7 @@
             $gebruiker = mysqli_fetch_array($resultaat);
             //koppelt de session aan de gebruikersnaam
             $_SESSION['username'] = $gebruiker['Naam'];
+            $_SESSION['Klas'] = $gebruiker['Klas'];
             header("location: home_mentor.php");
           }
         } else
