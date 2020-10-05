@@ -62,7 +62,7 @@ if (!isset($_SESSION['username']))
             echo "</tr>";
           ?>
         </table><br>
-        <button type="button" name="Toevoegen"><a href=''>Toevoegen</a></button>
+        <button type="button" name="Toevoegen"><a href='bedrijf_toevoeg.php'>Toevoegen</a></button>
         <button type="button" name="Aanpassen"><a href=''>Aanpassen</a></button>
         <button type="button" name="Verwijderen"><a href=''>verwijderen</a></button>
         <button type="button" name="Evalueren"><a href=''>Evalueren</a></button><br>
@@ -83,7 +83,6 @@ if (!isset($_SESSION['username']))
            {
              $evaluatie = mysqli_fetch_array($resultEv);
              ?>
-           </table>
              <h3>Evaluatie:</h3>
              <table border="1">
                <tr>
