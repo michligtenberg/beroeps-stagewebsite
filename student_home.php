@@ -68,33 +68,12 @@ if (!isset($_SESSION['username']))
         <button type="button" name="Evalueren"><a href=''>Evalueren</a></button><br>
         <?php
         //Array om de oude data in te doen
-        $bedrijven = array('NaamBedrijf' => $bedrijf['NaamBedrijf'],
-                           'ContactPersoon' => $bedrijf['ContactPersoon'],
-                           'ContractDatum' => $bedrijf['ContractDatum'],
-                           'Plaats' => $bedrijf['Plaats'],
-                           'Link' => $bedrijf['Link'],);
+        // $bedrijven = array('NaamBedrijf' => $bedrijf['NaamBedrijf'],
+        //                    'ContactPersoon' => $bedrijf['ContactPersoon'],
+        //                    'ContractDatum' => $bedrijf['ContractDatum'],
+        //                    'Plaats' => $bedrijf['Plaats'],
+        //                    'Link' => $bedrijf['Link'],);
 
-        ?>
-         <h3>Vorige bedrijven:</h3>
-         <table border="1">
-           <tr>
-             <th>Naam bedrijf</th>
-             <th>Contactpersoon</th>
-             <th>Contractdatum</th>
-             <th>Plaats</th>
-             <th>Website</th>
-           </tr>
-           <?php
-             //echo de content van de array als er meer dan 1 bedrijf is
-             echo "<tr>";
-             echo "<td>".$bedrijf['NaamBedrijf']."</td>";
-             echo "<td>".$bedrijf['ContactPersoon']."</td>";
-             echo "<td>".$bedrijf['ContractDatum']."</td>";
-             echo "<td>".$bedrijf['Plaats']."</td>";
-             echo "<td><a href='".$bedrijf['Link']."'></a></td>";
-             echo "</tr>";
-           ?>
-           <?php
            //query voor de evaluatie
            $queryEv = "SELECT * FROM Evaluatie WHERE Student_ID = $student";
            //resultaat voor de evaluatie
@@ -104,6 +83,7 @@ if (!isset($_SESSION['username']))
            {
              $evaluatie = mysqli_fetch_array($resultEv);
              ?>
+           </table>
              <h3>Evaluatie:</h3>
              <table border="1">
                <tr>
