@@ -1,0 +1,72 @@
+body {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 10vw 30vw 10vw;
+  grid-gap: 1em;
+  background-repeat: no-repeat;
+  background-size: auto;
+  overflow: hidden;
+}
+
+header
+{
+  margin-top: 6.25em;
+  grid-column: 1 / span 2;
+  margin-bottom: -6.25em;
+}
+main
+{
+margin-top: 6.25em;
+margin-left: -25em;
+}
+aside
+{
+  margin-top: 6.25em;
+  margin-right: 25em;
+}
+
+
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+header,
+main,
+aside {
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  width: 100%
+}
+
+.logo{
+  z-index: -1;
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  
+}
+
+
+
+
