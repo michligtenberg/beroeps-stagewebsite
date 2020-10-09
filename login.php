@@ -25,14 +25,14 @@
         $query = "";
 
         if (preg_match("/^-?[1-9][0-9]*$/", $username)) {
-            $query .= "SELECT * FROM Student WHERE
+            $query .= "SELECT * FROM studenten WHERE
                        StudentNummer = '$username' AND Wachtwoord = '$password'";
 
             //check connectie met de database en voer de query uit
             $resultaat = mysqli_query($mysql, $query);
         } else
         {
-            $query .= "SELECT * FROM Mentor WHERE
+            $query .= "SELECT * FROM mentoren WHERE
                        Naam = '$username' AND Wachtwoord = '".md5($password)."'";
             $resultaat = mysqli_query($mysql, $query);
         }
