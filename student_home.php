@@ -65,7 +65,7 @@ else
             <button type="button" name="Toevoegen"><a href='bedrijf_toevoeg.php'>Toevoegen</a></button>
             <button type="button" name="Aanpassen"><a href='bedrijf_bewerk.php?id=<?php echo $bedrijf['BedrijfID'] ?>'>Aanpassen</a></button>
             <button type="button" name="Verwijderen"><a href='bedrijf_verwijder.php?id=<?php echo $bedrijf['BedrijfID'] ?>'>verwijderen</a></button>
-            <button type="button" name="Evalueren"><a href=''>Evalueren</a></button><br>
+            <button type="button" name="Evalueren"><a href='evaluatie_toevoeg.php'>Evalueren</a></button><br>
             <?php
         //Array om de oude data in te doen
         // $bedrijven = array('NaamBedrijf' => $bedrijf['NaamBedrijf'],
