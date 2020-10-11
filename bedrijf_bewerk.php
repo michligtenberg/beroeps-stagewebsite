@@ -17,6 +17,7 @@ else
   <head>
     <meta charset="utf-8">
     <title>Bedrijf Bewerken</title>
+    <link rel="stylesheet" href="style/css.css">
   </head>
   <body>
     <h1>Bedrijf bewerken voor <?php echo $_SESSION['naam']; ?></h1>
@@ -86,5 +87,10 @@ else
          </tr>
        </table>
      </form>
+    <div class="video-container">
+        <video autoplay loop muted>
+          <source src="img/video.mp4" type="video/mp4">
+        </video>
+      </div>
   </body>
 </html>
