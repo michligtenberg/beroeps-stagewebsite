@@ -25,6 +25,11 @@ if (!isset($_SESSION['username']))
           <aside>
             </aside>
           <main>
+      <div class="video-container">
+        <video autoplay loop muted>
+          <source src="img/video.mp4" type="video/mp4">
+        </video>
+      </div>
             <body>
               <?php
               //zoekt de student id op via een session die al word gemaakt bij het inloggen
