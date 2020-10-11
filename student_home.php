@@ -19,6 +19,7 @@ else
     <meta charset="utf-8">
     <title>Student</title>
     <base href="student">
+    <link rel="stylesheet" href="style/css.css">
   </head>
   <body>
     <h1>Welkom, <?php echo $_SESSION['naam']; ?></h1>
@@ -114,5 +115,10 @@ else
         echo "<a href='login.php'>Terug</a> naar de login pagina.";
     }
     ?>
+      <div class="video-container">
+        <video autoplay loop muted>
+          <source src="img/video.mp4" type="video/mp4">
+        </video>
+      </div>
   </body>
 </html>
