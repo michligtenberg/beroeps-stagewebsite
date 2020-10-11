@@ -109,5 +109,11 @@
      <div class="loguit">
        <a href="loguit.php">Loguit</a>
      </div>
+    
+    <div class="video-container">
+        <video autoplay loop muted>
+          <source src="video/video.mp4" type="video/mp4">
+        </video>
+      </div>
   </body>
 </html>
