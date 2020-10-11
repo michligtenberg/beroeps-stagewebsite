@@ -3,7 +3,6 @@ body {
   grid-template-columns: 75% 25%;
   grid-template-rows: 10vw 30vw 10vw;
   grid-gap: 1em;
-  background-image: url('../img/gif.gif');
   background-size: cover;
   height: 100vh;
   padding:0;
@@ -41,4 +40,19 @@ aside {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  width: 100%
 }
