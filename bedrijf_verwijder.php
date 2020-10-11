@@ -18,6 +18,7 @@ else
   <head>
     <meta charset="utf-8">
     <title>Bedrijf verwijderen</title>
+    <link rel="stylesheet" href="style/css.css">
   </head>
   <body>
     <h1>Bedrijf verwijderen voor <?php echo $_SESSION['naam']; ?></h1>
@@ -89,5 +90,10 @@ else
         echo "<p><a href='student_home.php'>Terug</a> naar de homepagina.</p>";
       }
      ?>
+      <div class="video-container">
+        <video autoplay loop muted>
+          <source src="img/video.mp4" type="video/mp4">
+        </video>
+      </div>
   </body>
 </html>
